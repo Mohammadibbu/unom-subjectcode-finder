@@ -1,7 +1,9 @@
 addEventListener("click",function(event){event.preventDefault()});
+
 function findsubcode() {
 var sc=document.getElementById('sub_code').value;
 let subcode=sc.toLowerCase();
+// let loader=document.getElementById("loader");
 	console.log(subcode)
 	if (subcode==null || subcode=="") {
 		alert("Please Enter the Subject Code")
@@ -9,6 +11,10 @@ let subcode=sc.toLowerCase();
 //1st semester
 	else if (subcode=="la11a") {
 		document.getElementById("rslt").innerHTML="<table border='1'><tr><td>SUBJECT NAME</td><td> Tamil-I</td></tr><tr><td>SUBJECT CODE </td><td> "+sc.toUpperCase()+"</td></tr><tr><td>SEMESTER</td><td>I</td></tr></table>";
+// 		loader.style.display="none"
+//      setTimeout(()=>{loader.style.display="none";document.getElementById("rslt").innerHTML="<table border='1'><tr><td>SUBJECT NAME</td><td> Tamil-I</td></tr><tr><td>SUBJECT CODE </td><td> "+sc.toUpperCase()+"</td></tr><tr><td>SEMESTER</td><td>I</td></tr></table>";
+// },3000);
+
 	}else if (subcode=="lz11a") {
 		document.getElementById("rslt").innerHTML="<table border='1'><tr><td>SUBJECT NAME</td><td> English-I</td></tr><tr><td>SUBJECT CODE </td><td> "+sc.toUpperCase()+"</td></tr><tr><td>SEMESTER</td><td>I</td></tr></table>";
 
@@ -126,7 +132,8 @@ let subcode=sc.toLowerCase();
 
 	}
 	else if (subcode=="se25c") {
-		document.getElementById("rslt").innerHTML="<h4>SUBJECT NAME : Relational Database Management System<br>SUBJECT CODE : "+sc.toUpperCase()+"<br>SEMESTER : V</h4>";
+		document.getElementById("rslt").innerHTML="<table border='1'><tr><td>SUBJECT NAME</td><td>Relational Database Management System</td></tr><tr><td>SUBJECT CODE </td><td> "+sc.toUpperCase()+"</td></tr><tr><td>SEMESTER</td><td>V</td></tr></table>";
+
 
 	}
 	else if (subcode=="su25a") {
