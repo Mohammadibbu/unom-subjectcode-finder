@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>subject code finder</title>
+	<script type="text/javascript" src="subcode.js"></script>
+	<style type="text/css">
+		body{
+			background: #baaebd;
+			font-family: sans-serif;
+		}
+	   label{
+	   	font-size: 20px;
+	   	color: maroon;
+	   }
+		table{
+			color: #0d170b;
+			align-content: center;
+			border-collapse: collapse;
+		}
+		td{
+			padding:20px ;
+			border: 1px solid black;
+		}
+		#finder_content{
+			border: 2px solid darkviolet;
+			background: lightgoldenrodyellow;
+			width: 250px;
+			border-radius: 30px;
+			height: 100px;
+			padding: 30px;
+			text-align: center;
+		}
+		input{
+			border-radius: 10px;
+			padding: 4px;
+			outline: 1px solid gray;
+			border: 1px solid black;
+			transition: .7s;
+		}input:hover{
+			outline: 3px solid pink;
+
+		}
+		button{
+			padding: 10px;
+			color: white;
+			background: slateblue;
+			font-size: bold;
+			border-radius: 5px;
+			border: none;
+		}
+		tr{
+			background-color: lightblue;
+		}
+		tr:nth-child(even) {background-color:lightcyan;}
+	</style>
+</head>
+<body>
+	<center>
+ <h1>SUBJECT CODE FINDER <br>BCA 2020-2023</h1>
+
+ <form>
+ 	<div id="finder_content">
+ 		<label for="sub_code">ENTER SUBJECT CODE</label><br><br>
+ 			<input id="sub_code" type="text" maxlength="5" autofocus><br><br>
+ 		    <button id="rslt_btn" onclick="findsubcode();">Find</button>
+ 		    <button type="button" onclick="location.reload()">Reset</button>
+ 	</div>
+</form>
+<br><br>
+ <div id="rslt"></div></center>
+</body>
+</html>
