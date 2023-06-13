@@ -176,6 +176,7 @@ let subcode=sc.toLowerCase();
 	}else{
 		alert("invalid Subject Code...");
        document.getElementById('sub_code').value="";
+       document.getElementById("rslt").innerHTML=""
 
 
 	}
