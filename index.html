@@ -54,6 +54,22 @@
 			background-color: lightblue;
 		}
 		tr:nth-child(even) {background-color:lightcyan;}
+		/*loader style*/
+	/*#loader {
+  border: 4px solid lightcyan;
+  border-radius: 50%;
+  border-top: 4px solid  red;
+  width: 30px;
+  height: 30px;
+  animation: spin .8s linear infinite;
+}
+
+
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}*/
 	</style>
 </head>
 <body>
@@ -63,12 +79,13 @@
  <form>
  	<div id="finder_content">
  		<label for="sub_code">ENTER SUBJECT CODE</label><br><br>
- 			<input id="sub_code" type="text" maxlength="5" autofocus><br><br>
+ 			<input id="sub_code" type="text" maxlength="5" ondblclick="this.value='';" autofocus><br><br>
  		    <button id="rslt_btn" onclick="findsubcode();">Find</button>
  		    <button type="button" onclick="location.reload()">Reset</button>
  	</div>
 </form>
 <br><br>
+<!-- <div id="loader" style="display: none;"></div> -->
  <div id="rslt"></div></center>
 </body>
 </html>
