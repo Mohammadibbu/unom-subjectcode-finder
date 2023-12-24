@@ -1,10 +1,12 @@
 addEventListener("click",function(event){event.preventDefault()});
-
+const btn=document.getElementById("rslt_btn");
 function findsubcode() {
         
+	btn.innerText="Searching..."
 	setTimeout(searching,2000);
 }
 function searching(){
+btn.innerText="Find"
 var sc=document.getElementById('sub_code').value;
 let subcode=sc.toLowerCase();
 // let loader=document.getElementById("loader");
