@@ -1,6 +1,10 @@
 addEventListener("click",function(event){event.preventDefault()});
 
 function findsubcode() {
+        
+	setTimeout(searching,2000);
+}
+function searching(){
 var sc=document.getElementById('sub_code').value;
 let subcode=sc.toLowerCase();
 // let loader=document.getElementById("loader");
