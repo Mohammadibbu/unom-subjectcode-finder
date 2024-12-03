@@ -1,94 +1,108 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>subject code finder</title>
-	<script type="text/javascript" src="subcode.js"></script>
-	<style type="text/css">
-		body{
-			background: #ff9efd;
-			font-family: sans-serif;
-		}
-	   label{
-	   	font-size: 20px;
-	   	color: maroon;
-	   }
-		table{
-			color: #0d170b;
-			align-content: center;
-			border-collapse: collapse;
-		}
-		td{
-			padding:20px ;
-			border: 1px solid black;
-		}
-		#finder_content{
-			border: 2px solid darkviolet;
-			background: lightgoldenrodyellow;
-			width: 250px;
-			border-radius: 30px;
-			height: 100px;
-			padding: 30px;
-			text-align: center;
-		}
-		input{
-			border-radius: 10px;
-			padding: 4px;
-			outline: 1px solid gray;
-			border: 1px solid black;
-			transition: .7s;
-		}input:hover{
-			outline: 3px solid cyan;
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Subject Code Finder</title>
+  <script type="text/javascript" src="subcode.js"></script>
+  <style>
+    body {
+      background: #ff9efd;
+      font-family: sans-serif;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+    }
 
-		}
-		button{
-			padding: 10px;
-			color: white;
-			background: slateblue;
-			font-size: bold;
-			border-radius: 5px;
-			border: none;
-			cursor:pointer;
-		}button:hover{
-			background:#6A5ACD;}
-			
-		tr{
-			background-color: lightblue;
-		}
-		tr:nth-child(even) {background-color:lightcyan;}
-		/*loader style*/
-	/*#loader {
-  border: 4px solid lightcyan;
-  border-radius: 50%;
-  border-top: 4px solid  red;
-  width: 30px;
-  height: 30px;
-  animation: spin .8s linear infinite;
-}
+    h1 {
+      text-align: center;
+      color: maroon;
+      margin-bottom: 20px;
+    }
 
+    #finder_content {
+      border: 2px solid darkviolet;
+      background: lightgoldenrodyellow;
+      width: 300px;
+      border-radius: 30px;
+      padding: 20px;
+      text-align: center;
+      box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+    }
 
+    label {
+      font-size: 20px;
+      color: maroon;
+    }
 
-@keyframes spin {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
-}*/
-	</style>
+    input {
+      width: 100%;
+      border-radius: 10px;
+      padding: 8px;
+      margin-top: 10px;
+      margin-bottom: 20px;
+      border: 1px solid black;
+      outline: 1px solid gray;
+      transition: outline 0.3s ease;
+    }
+
+    input:hover {
+      outline: 3px solid cyan;
+    }
+
+    button {
+      padding: 10px 15px;
+      color: white;
+      background: slateblue;
+      font-weight: bold;
+      border-radius: 5px;
+      border: none;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    button:hover {
+      background: #6A5ACD;
+    }
+
+    table {
+      margin-top: 20px;
+      border-collapse: collapse;
+      color: #0d170b;
+    }
+
+    td {
+      padding: 20px;
+      border: 1px solid black;
+    }
+
+    tr {
+      background-color: lightblue;
+    }
+
+    tr:nth-child(even) {
+      background-color: lightcyan;
+    }
+  </style>
 </head>
 <body>
-	<center>
- <h1>SUBJECT CODE FINDER <br>BCA 2020-2023</h1>
+  <h1>SUBJECT CODE FINDER <br>BCA 2020-2023</h1>
 
- <form>
- 	<div id="finder_content">
- 		<label for="sub_code">ENTER SUBJECT CODE</label><br><br>
- 			<input id="sub_code" type="text" maxlength="5" ondblclick="this.value='';" autofocus><br><br>
- 		    <button id="rslt_btn" onclick="findsubcode();">Find</button>
- 		    <button type="button" onclick="location.reload()">Reset</button>
- 	</div>
-</form>
-<br><br>
-<!-- <div id="loader" style="display: none;"></div> -->
- <div id="rslt"></div></center>
+  <form id="subject-form" onsubmit="findsubcode(); return false;">
+    <div id="finder_content">
+      <label for="sub_code">Enter Subject Code</label><br>
+      <input id="sub_code" type="text" maxlength="5" ondblclick="this.value='';" autofocus>
+      <div>
+        <button id="rslt_btn" type="button" onclick="findsubcode()">Find</button>
+        <button type="button" onclick="location.reload()">Reset</button>
+      </div>
+    </div>
+  </form>
+
+  <div id="rslt"></div>
 </body>
 </html>
