@@ -24,7 +24,7 @@ The **Subject Code Finder** is a web application designed to help students quick
 
 1. Download or clone the repository:
    ```bash
-   git clone https://github.com/yourusername/subject-code-finder.git
+   git clone https://github.com/Mohammadibbu/unom-subjectcode-finder.git
    ```
 
 2. Open the project folder and double-click `index.html` to open it in your browser.
